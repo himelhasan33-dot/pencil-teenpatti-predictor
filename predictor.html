@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teen Patti Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background: #0f121a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-family: Arial;
+        }
+        .box {
+            background: #1b2030;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 12px;
+        }
+        button {
+            width: 90%;
+            background: #5b6bff;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            margin: 10px 0;
+            color: white;
+            font-size: 18px;
+        }
+        #result {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #3efc89;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Teen Patti Smart Predictor</h2>
+<p>AI Powered Prediction Tool</p>
+
+<div class="box">
+    <button onclick="predict1()">Predict Round 1</button>
+    <button onclick="predict2()">Predict Round 2</button>
+    <button onclick="predict3()">Predict Round 3</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function getRandomPrediction() {
+    const options = ["A Wins", "B Wins", "C Wins"];
+    return options[Math.floor(Math.random() * options.length)];
+}
+
+function predict1() {
+    document.getElementById("result").innerHTML = 
+        "Round 1 Prediction: " + getRandomPrediction();
+}
+
+function predict2() {
+    document.getElementById("result").innerHTML = 
+        "Round 2 Prediction: " + getRandomPrediction();
+}
+
+function predict3() {
+    document.getElementById("result").innerHTML = 
+        "Round 3 Prediction: " + getRandomPrediction();
+}
+</script>
+
+</body>
+</html>
